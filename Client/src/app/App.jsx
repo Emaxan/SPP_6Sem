@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import TableContainer from '../tableView/TableContainer';
+
 //import './App.scss';
 
 const mapStateToProps = () => ({
@@ -15,7 +17,7 @@ class App extends Component {
     return (
       <div className="wrapper">
         <div className="content">
-          <h1>Hello world!!!</h1>
+          <TableContainer />
         </div>
       </div>
     );

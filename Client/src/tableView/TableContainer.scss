@@ -1,0 +1,24 @@
+.tableContainer {
+  padding: 0 15px;
+}
+
+.table {
+  & td {
+    border: 1px solid black;
+  }
+
+  & caption {
+    text-align: center;
+    border: 2px solid lightgray;
+  }
+}
+
+.tableSelect {
+  text-align: center;
+  width: 20%;
+  margin: 10px auto;
+
+  & select {
+    width: 100%;
+  }
+}
