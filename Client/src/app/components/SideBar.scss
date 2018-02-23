@@ -1,0 +1,57 @@
+@import "./variables";
+
+.menu {
+  padding: 0 $content-padding-horizontal;
+  width: $menu-width;
+  background-color: $navbar-default-bg;
+  margin-top: -$navbar-margin-bottom;
+  margin-bottom: -$footer-height;
+  box-sizing: content-box;
+  overflow-x: hidden;
+  transition: width 0.5s ease-in-out;
+
+  &:hover {
+    width: $expand-menu-width;
+  }
+
+  & .glyphicon {
+    position: absolute;
+    top: 18px;
+    left: 14px;
+  }
+
+  &__item {
+    display: block;
+    width: $expand-menu-width;
+    line-height: $menu-line-height/2;
+    padding: $menu-line-height/4 $expand-menu-width/6;
+    background-color: transparent;
+    text-align: left;
+    text-decoration: none;
+    color: $gray-light;
+
+    &.react-bootstrap-link {
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+        color: $gray-dark;
+      }
+    }
+
+    &-wrapper {
+      &.btn {
+        position: relative;
+        background-color: $navbar-default-bg;
+        border: none;
+        line-height: $navbar-height;
+        padding: 0;
+        text-align: center;
+
+        &:hover {
+          background-color: darken($navbar-default-bg, 10%);
+        }
+      }
+    }
+  }
+}

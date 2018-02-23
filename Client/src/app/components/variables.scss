@@ -1,0 +1,15 @@
+@import "../variables";
+
+$navbar-height: 80px;
+$navbar-margin-bottom: 0;
+
+$menu-width: 40px;
+$expand-menu-width: 300px;
+$menu-line-height: 50px;
+$menu-item-background-color: white;
+
+$content-padding-horizontal: 10px;
+
+$footer-height: 40px;
+
+$main-height-decrease: ($navbar-height + 2 + $navbar-margin-bottom + $footer-height);

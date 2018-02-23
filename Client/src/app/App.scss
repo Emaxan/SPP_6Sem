@@ -1,0 +1,39 @@
+@import "./components/variables";
+
+$main-margin-left: 30px;
+$main-width-decrease: ($content-padding-horizontal + $menu-width + $content-padding-horizontal + $main-margin-left);
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  background: url("./images/background.jpg") repeat;
+  background-size: 30%;
+}
+
+.content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-grow: 1;
+}
+
+.app-content {
+  flex-grow: 1;
+  margin: auto;
+  height: calc(100vh - #{$main-height-decrease});
+  min-width: 0;
+  max-width: calc(100vw - #{$main-width-decrease});
+}
+
+#container {
+  min-height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}

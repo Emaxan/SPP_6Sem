@@ -22,13 +22,14 @@ const mapDispatchToProps = {
 class TableContainer extends Component {
 
   componentDidMount() {
-    this.props.getTableNames();
     this.setState({value: null});
+    this.props.getTableNames();
   }
 
   componentWillReceiveProps(nextProps) {
     if((nextProps.tableNames != undefined)
         && (nextProps.tableNames.length != 0)
+        && (this.state != null)
         && (this.state.value == null)) {
       this.setState({value: nextProps.tableNames[0]});
       this.props.getData(nextProps.tableNames[0]);
