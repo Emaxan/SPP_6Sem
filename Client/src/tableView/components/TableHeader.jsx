@@ -8,7 +8,7 @@ export const TableHeader = ({ columns }) => (
     <tr className="tableHeader">
       {
         columns.map((column, index) => (
-          <th key={index}>{column.name}</th>
+          <th key={index}>{column}</th>
         ))
       }
     </tr>

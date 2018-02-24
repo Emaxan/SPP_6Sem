@@ -7,7 +7,7 @@ export const TableRows = ({ rows }) => (
   <tbody>
     {
       rows.map((row, index) => (
-        <TableRow columns={row.columns} key={index}/>
+        <TableRow columns={row} key={index}/>
       ))
     }
   </tbody>

@@ -5,18 +5,17 @@ import './TableRow.scss';
 
 export const TableRow = ({ columns }) => (
   <tr className="tableRow">
-    {
-      columns.map((column, index) => (
-        <td key={index}>{column.data}</td>
-      ))
-    }
+    <td>{columns.id}</td>
+    <td>{columns.nickname}</td>
+    <td>{columns.password}</td>
+    <td>{columns.role.name}</td>
+    <td>{columns.email}</td>
+    <td>{columns.phoneNumber}</td>
+    <td>{columns.registrationDate}</td>
+    <td>{columns.avatarPath}</td>
   </tr>
 );
 
 TableRow.propTypes = {
-  columns: PropTypes.array.isRequired,
-};
-
-TableRow.defaultProps = {
-  columns: [],
+  columns: PropTypes.object.isRequired,
 };

@@ -38,9 +38,9 @@ export const getTableNames = () => (dispatch) => {
   });
 };
 
-export const getData = (tableName) => (dispatch) => {
+export const getData = (url) => (dispatch) => {
   dispatch(getDataStart());
-  return fetch('./mock/tables/' + tableName + '.json').then((response) => {
+  return fetch(url).then((response) => {
     if(response.status != 200){
       dispatch(getDataFail());
     } else {

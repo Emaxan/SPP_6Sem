@@ -32,21 +32,22 @@ class TableContainer extends Component {
         && (this.state != null)
         && (this.state.value == null)) {
       this.setState({value: nextProps.tableNames[0]});
-      this.props.getData(nextProps.tableNames[0]);
+      this.props.getData(nextProps.tableNames[0].Url);
     }
   }
 
   change = (event) => {
-    this.setState({value: event.target.value});
-    this.props.getData(event.target.value);
+    this.setState({value: event.target.record});
+    this.props.getData(event.target.record.Url);
   }
 
   render = () => {
 
-    var {tableName, header, rows} = this.props.data;
-
+    var rows = this.props.data.length==undefined?undefined:this.props.data;
+    var header = this.state == null ? [] : this.state.value == null? [] : this.state.value.Headers;
+    var tableName = this.state == null ? '' : this.state.value == null? '': this.state.value.Name;
     var namesArray = this.props.tableNames.map((name, index) => (
-      <option key={index} value={name}>{name}</option>
+      <option key={index} value={name.Name} record={name}>{name.Name}</option>
     ));
 
     return (
@@ -71,7 +72,7 @@ class TableContainer extends Component {
 }
 
 TableContainer.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
   tableNames: PropTypes.array.isRequired,
   getData: PropTypes.func.isRequired,
   getTableNames: PropTypes.func.isRequired,
