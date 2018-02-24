@@ -20,3 +20,35 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#SERVER
+Server/target/
+!Server/.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+Server/.apt_generated
+Server/.classpath
+Server/.factorypath
+Server/.project
+Server/.settings
+Server/.springBeans
+
+### IntelliJ IDEA ###
+Server/.idea
+Server/*.iws
+Server/*.iml
+Server/*.ipr
+
+### NetBeans ###
+Server/nbproject/private/
+Server/build/
+Server/nbbuild/
+Server/dist/
+Server/nbdist/
+Server/.nb-gradle/
+
+#CLIENT
+Client/node_modules/
+Client/*/build/
+Client/*.log
+Client/*.orig
